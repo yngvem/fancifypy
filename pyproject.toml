@@ -1,6 +1,5 @@
 [project]
 name = "fancifypy"
-version = "0.1.0"
 description = "Code formatter to get less boring Python files"
 authors = [
     {name = "Yngve Mardal Moe", email = "yngve.m.moe@gmail.com"},
@@ -9,13 +8,16 @@ dependencies = ["typer"]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
+dynamic = ["version"]
 
 [project.scripts]
 fancifypy = "fancifypy.cli:main"
 
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=61", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
 
 [dependency-groups]
 dev = [
